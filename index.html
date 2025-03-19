@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2024年中国商业银行业绩分析与2025年前瞻</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>2024年中国商业银行业绩分析与2025年前瞻</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">概述</a></li>
+          <li><a href="asset-quality.html">资产质量</a></li>
+          <li><a href="profitability.html">盈利表现</a></li>
+          <li><a href="nim.html">净息差</a></li>
+          <li><a href="capital.html">资本充足率</a></li>
+          <li><a href="outlook.html">2025前瞻</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="dashboard">
+      <div class="card">
+        <div class="card-header">
+          <h2>核心业务洞察</h2>
+        </div>
+        <div class="card-body">
+          <div class="insight-card">
+            <h3>1. 银行业步入深度转型期，盈利模式调整迫在眉睫</h3>
+            <p>2024年银行业经历了盈利能力下行、净息差收缩和资产质量压力的多重考验，净利润同比首次出现负增长（-2%），ROE跌破10%至历史低位（8.10%），这标志着传统"以量补价"增长模式的终结。在政策环境变化和市场竞争加剧的背景下，银行业已进入深度转型期，需加快从规模扩张向质量效益提升转变。</p>
+          </div>
+          <div class="insight-card">
+            <h3>2. 净息差跌至历史低位1.52%，是利润下滑的主要推手</h3>
+            <p>2024年商业银行净息差由1.69%进一步降至1.52%，创有监测数据以来的最低水平。LPR多次调降和存量房贷利率下调等政策因素是主要原因，负债端存款竞争激烈导致成本刚性更是雪上加霜。净息差收窄直接导致银行利息净收入大幅减少，成为利润下滑的主要推手。</p>
+          </div>
+          <div class="insight-card">
+            <h3>3. 资产质量实现"双降"，但行业分化明显</h3>
+            <p>2024年不良贷款率降至1.50%，且不良余额实现净减少，风险抵补能力继续增强（拨备覆盖率211.19%），彰显银行业风险管理水平提升。但结构性风险依然突出：大型银行不良率仅1.23%，而农商行高达2.80%；房地产领域风险依然高企，对银行资产质量影响深远。</p>
+          </div>
+          <div class="insight-card">
+            <h3>4. 分化加剧，银行业进入优胜劣汰加速期</h3>
+            <p>不同类型银行的业绩分化继续扩大：大型银行凭借规模和客户优势，保持相对稳定的利润和较低的不良率；城商行创新不足、增长乏力，利润同比下滑超13%；农商行信贷质量压力突出。市场竞争加剧将进一步推动银行业重组整合，优胜劣汰速度加快。</p>
+          </div>
+          <div class="insight-card">
+            <h3>5. 2025年行业有望触底反弹，业务结构调整成关键</h3>
+            <p>随着经济复苏动能增强和多轮货币政策效果显现，2025年银行业有望迎来盈利拐点，净息差企稳回升是关键变量。差异化发展将成主流：大型银行稳健担当、股份行灵活转型、城商行深耕本地、农商行扎根基层。加快业务转型、优化信贷结构、提升非息收入占比是提高盈利可持续性的关键路径。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>行业关键指标概览</h2>
+        </div>
+        <div class="card-body">
+          <div class="grid">
+            <div class="metric-card">
+              <h3>不良贷款率</h3>
+              <div class="value">1.50%</div>
+              <div class="change decrease">
+                <span>同比 -0.09%</span>
+              </div>
+            </div>
+            <div class="metric-card">
+              <h3>净息差</h3>
+              <div class="value">1.52%</div>
+              <div class="change decrease">
+                <span>同比 -0.17%</span>
+              </div>
+            </div>
+            <div class="metric-card">
+              <h3>ROE</h3>
+              <div class="value">8.10%</div>
+              <div class="change decrease">
+                <span>同比 -0.83%</span>
+              </div>
+            </div>
+            <div class="metric-card">
+              <h3>资本充足率</h3>
+              <div class="value">15.74%</div>
+              <div class="change increase">
+                <span>同比 +0.68%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chart-container">
+            <canvas id="profitabilityChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h2>政策环境分析</h2>
+        </div>
+        <div class="card-body">
+          <div class="tab-navigation">
+            <div class="tab-link active" data-tab="policy-tab-1">中央金融工作会议</div>
+            <div class="tab-link" data-tab="policy-tab-2">两会金融政策</div>
+            <div class="tab-link" data-tab="policy-tab-3">9·24金融政策组合拳</div>
+          </div>
+          
+          <div class="tab-content active" id="policy-tab-1">
+            <p>2023年10月30-31日召开的中央金融工作会议规格空前，明确了未来几年金融工作的五大任务：加快建设金融强国、全面加强金融监管、完善金融体制、优化金融服务、防范化解风险。会议强调金融的政治性和人民性，要求走中国特色金融发展之路，突出金融高质量发展与供给侧结构性改革。</p>
+            <p>针对当前突出问题，会议特别提出要稳妥化解地方政府债务和房地产风险，着力"稳地产、地方化债、活跃资本市场"，预计推出"一揽子"化解方案。同时会议首提<span class="emphasis">"培育一流投资银行和投资机构"</span>，强化直接融资市场，这为银行业指明了支持资本市场和提升专业能力的新方向。</p>
+            
+            <div class="user-notes">
+              <h4>您的分析笔记</h4>
+              <textarea data-note-id="policy-1" placeholder="在此添加您对政策解读的分析笔记..."></textarea>
+              <button class="save-notes" data-note-id="policy-1">保存笔记</button>
+            </div>
+          </div>
+          
+          <div class="tab-content" id="policy-tab-2">
+            <p>2025年全国"两会"期间，监管层延续了中央金融会议精神，强调积极的财政政策和适度宽松的货币政策取向。政府明确要求银行业加大对实体经济的支持，尤其是制造业、科技创新、中小微企业等领域的信贷投放，同时落实减费让利政策，继续引导降低企业融资成本。</p>
+            <p>中国人民银行行长表示，将根据经济需要适时运用降准、降息等工具，以保持流动性合理充裕。在防风险方面，"两会"强调巩固金融安全底线，要求银行配合地方政府专项债务置换，缓释区域性债务风险，并继续支持刚性和改善性住房需求，促进房地产市场平稳健康发展。</p>
+            
+            <div class="user-notes">
+              <h4>您的分析笔记</h4>
+              <textarea data-note-id="policy-2" placeholder="在此添加您对两会金融政策的分析笔记..."></textarea>
+              <button class="save-notes" data-note-id="policy-2">保存笔记</button>
+            </div>
+          </div>
+          
+          <div class="tab-content" id="policy-tab-3">
+            <p>2024年9月24日，央行、金监总局、证监会联合推出一揽子增量政策，以提振市场信心和支持实体经济。货币政策方面，人民银行宣布下调存款准备金率0.5个百分点（释放长期流动性约1万亿元），并将7天逆回购利率下调20个基点至1.5%，引导贷款市场报价利率（LPR）和存款利率下行，"保持商业银行净息差的稳定"。</p>
+            <p>同时启动存量房贷利率调整，指导银行将存量按揭利率下调约0.5个百分点，央行预计此举可惠及5000万户、1.5亿人，每年减少利息支出约1500亿元。尽管存量房贷利率下调直接减少银行利息收入，但有望缓解提前还贷压力，对银行影响偏中性。房地产金融政策方面，统一全国二套房首付比例下调至20%以下，并将两项重点房贷支持政策延期至2026年底。</p>
+            
+            <div class="user-notes">
+              <h4>您的分析笔记</h4>
+              <textarea data-note-id="policy-3" placeholder="在此添加您对9·24政策组合拳的分析笔记..."></textarea>
+              <button class="save-notes" data-note-id="policy-3">保存笔记</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2024 中国银行业绩分析报告 | 数据来源：金融监管总局、中国人民银行</p>
+    </div>
+  </footer>
+</body>
+</html> 
